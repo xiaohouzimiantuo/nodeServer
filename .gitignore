@@ -1,6 +1,6 @@
 logs
 *.log
-lib/
+dist/
 npm-debug.log*
 node_modules/
 *.swp

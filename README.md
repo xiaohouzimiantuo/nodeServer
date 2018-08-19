@@ -11,8 +11,8 @@ The two commands run together to achieve the code's hot update.
 
 
 使用node编写服务端代码，主要是为前端提供接口调用，源文件是在src目录，编译以后在lib文件夹里
-运行服务时直接npm run dev
-由于此项目使用es6的语法，所以开发时需要多运行一个编译的程序，npm run babel 
+运行服务时直接npm run test
+由于此项目使用es6的语法，所以开发时需要多运行一个编译的程序，npm run dev 
 两个命令一起运行实现代码的热更新
 
 #### Software architecture(软件架构)
@@ -32,12 +32,12 @@ essapp->项目的入口文件
 1. Global install node
 2. Global install supervisor & babel-cli
 3. Running in projects npm install (Download dependency)
-4. Running in projects npm run dev (Running project)
+4. Running in projects npm run devserver (Running project)
 
 1. 全局安装node
 2. 全局下载 supervisor babel-cli
 3. 在项目中运行npm install 下载依赖
-4. 在项目中运行npm run dev 运行项目
+4. 在项目中运行npm run devserver 运行项目
 
 
 

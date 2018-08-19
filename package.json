@@ -4,8 +4,10 @@
     "description": "node server",
     "main": "essapp",
     "scripts": {
-        "dev": "supervisor lib/essapp.js",
-        "babel": "npx babel src --out-dir lib --watch"
+        "test": "supervisor dist/essapp.js",
+        "dev": "npx babel src --out-dir dist --watch",
+        "server": "node dist/essapp.js",
+        "devserver": "babel-node src/essapp.js"
     },
     "author": "iverry",
     "license": "ISC",

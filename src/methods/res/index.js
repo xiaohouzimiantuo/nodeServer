@@ -2,7 +2,7 @@
 //     res.send({ code, msg, info });
 // };
 
-let resData = (data) => {
+export function resData(data, res) {
     let responseData = {
         code: 0,
         msg: '请求成功',
@@ -10,8 +10,9 @@ let resData = (data) => {
     };
 
     Object.assign(responseData, data);
+
+    if (res) {
+        res.send(responseData);
+    }
     return responseData;
 }
-
-global.ive = { resData };
-// console.log(resData);

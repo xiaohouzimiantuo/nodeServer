@@ -1,10 +1,10 @@
-let routes = [{
-    path: '/',
-    method: 'get',
-    controller: 'root'
-}, {
-    path: '/index',
-    controller: 'index'
-}];
-
-export default routes;
+module.exports = [{
+        path: '/',
+        method: 'get',
+        controller: 'root'
+    },
+    {
+        path: '/test',
+        controller: 'api.test'
+    }
+];

@@ -1,20 +1,22 @@
 {
     "name": "nodeserver",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "node server",
     "main": "essapp",
     "scripts": {
-        "test": "supervisor dist/essapp.js",
-        "dev": "npx babel src --out-dir dist --watch",
-        "server": "node dist/essapp.js",
-        "devserver": "babel-node src/essapp.js"
+        "start": "forever start -a -l l.log -o o.log -e e.log src/main.js",
+        "stop": "forever stop src/main.js",
+        "dev": "supervisor src/main.js"
     },
     "author": "iverry",
     "license": "ISC",
     "dependencies": {
-        "babel-cli": "^6.26.0",
-        "babel-preset-es2015": "^6.24.1",
         "body-parser": "^1.18.3",
-        "express": "^4.16.3"
+        "express": "^4.16.3",
+        "forever": "^0.15.3",
+        "mysql": "^2.16.0"
+    },
+    "devDependencies": {
+        "supervisor": "^0.12.0"
     }
 }

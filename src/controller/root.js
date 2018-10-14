@@ -1,3 +1,3 @@
-export default function(req, res) {
-    res.send('Hello World');
+module.exports = function(req, res) {
+    res.send('Hello my app');
 }
